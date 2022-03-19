@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ddKG1WBcpNnDCJlEBv9V2vySOGa67CDCRLBvO2W4PzM=",
+  "Source": "TechYatra.WebApi",
+  "BasePath": "_content/TechYatra.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
