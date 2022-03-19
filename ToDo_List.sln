@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDo_List.Infrastructure", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDo_List.Services", "ToDo_List.Services\ToDo_List.Services.csproj", "{6B0B3B45-6412-4D6E-89BC-56CF203760A0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDo_List.Api", "TechYatra.Api\ToDo_List.Api.csproj", "{02EA59D9-8B7A-49BF-B9AB-97B2E5EB8712}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechYatra.WebApi", "TechYatra.WebApi\TechYatra.WebApi.csproj", "{AD789D97-E811-4EE6-A1AB-E30939432AA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{6B0B3B45-6412-4D6E-89BC-56CF203760A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B0B3B45-6412-4D6E-89BC-56CF203760A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B0B3B45-6412-4D6E-89BC-56CF203760A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{02EA59D9-8B7A-49BF-B9AB-97B2E5EB8712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02EA59D9-8B7A-49BF-B9AB-97B2E5EB8712}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02EA59D9-8B7A-49BF-B9AB-97B2E5EB8712}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02EA59D9-8B7A-49BF-B9AB-97B2E5EB8712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD789D97-E811-4EE6-A1AB-E30939432AA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD789D97-E811-4EE6-A1AB-E30939432AA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD789D97-E811-4EE6-A1AB-E30939432AA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD789D97-E811-4EE6-A1AB-E30939432AA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
