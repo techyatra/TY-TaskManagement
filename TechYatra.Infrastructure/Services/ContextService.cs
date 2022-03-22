@@ -12,6 +12,10 @@ namespace ToDo_List.Infrastructure.Services
     public class ContextService: IContextService
     {
         private readonly ToDoContext _context;
+        private object work;
+
+        public object Works { get; private set; }
+
         public ContextService(ToDoContext context)
         {
             _context = context;
@@ -22,6 +26,13 @@ namespace ToDo_List.Infrastructure.Services
             _context.SaveChanges();
             return user;
         }
+        public User UpdateUser(User user)
+        {
+            _context.Update(user);
+            _context.SaveChanges();
+            return user;
+        }
+
 
         public bool DeleteUser(User user)
         {
@@ -55,9 +66,39 @@ namespace ToDo_List.Infrastructure.Services
             return user;
         }
 
-        public User UpdateUser(User user)
+        
+        public Work CreateWork(Work work)
         {
-            throw new NotImplementedException();
+            _context.Add(work);
+            _context.SaveChanges();
+            return work;
+        }
+        public List<Work> GetAllWorks()
+        {
+            var Works = _context.Works.ToList();
+            return Works;
+        }
+
+
+        public Work UpdateWork(Work work)
+        {
+          _context.Update(work);
+            _context.UpdateRange();
+            return work;
+        }
+
+
+        public bool DeleteWork(Work work)
+        {
+            try
+            {
+                _context.Remove(work);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
