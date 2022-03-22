@@ -16,5 +16,6 @@ namespace ToDo_List.Infrastructure.Context
         public DbSet<User> Users { get; set; }
         public DbSet<UserInfo> UserInfos { get; set; }
         public DbSet<Work> Works { get; set; }
+
     }
 }

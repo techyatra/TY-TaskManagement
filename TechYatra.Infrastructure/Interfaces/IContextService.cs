@@ -15,5 +15,9 @@ namespace ToDo_List.Infrastructure.Interfaces
         List<User> GetAllUsers();
         bool DeleteUser(User user);
         User UpdateUser(User user);
+        Work CreateWork(Work work);
+        List<Work> GetAllWorks();
+        Work UpdateWork(Work work);
+        bool DeleteWork(Work work);
     }
 }
