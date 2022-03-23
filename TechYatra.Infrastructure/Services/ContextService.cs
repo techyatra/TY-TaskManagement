@@ -66,6 +66,24 @@ namespace ToDo_List.Infrastructure.Services
             return user;
         }
 
+        public User GetUserByUserName(string userName)
+        {
+            var user = _context.Users.SingleOrDefault(s => s.UserName == userName);
+            return user;
+        }
+
+
+        public User GetUserByPhone(string phone)
+        {
+            var user = _context.Users.SingleOrDefault(u => u.Phone == phone);
+            return user;
+        }
+
+        public User GetUserByEmail(string email)
+        {
+            var user = _context.Users.SingleOrDefault(u => u.Email == email);
+            return user;
+        }
         
         public Work CreateWork(Work work)
         {

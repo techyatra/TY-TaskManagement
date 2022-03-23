@@ -19,6 +19,7 @@ namespace ToDo_List.Core.Entities
         public DateTime? AssignedAt { get; set; }
         [ForeignKey("UserId")]
         public User User { get; set; }
+        public Organisation Organisation { get; set; }
 
 
     }

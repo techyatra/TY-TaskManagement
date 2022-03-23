@@ -6,7 +6,7 @@ using ToDo_List.Services.Interfaces;
 
 namespace ToDo_List.Api.Controllers
 {
-    [Authorize]
+   // [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
@@ -23,32 +23,39 @@ namespace ToDo_List.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public string Get(int id)
+        public User Get(int id)
         {
-            return "value";
+            var user = _userService.GetUserById(id);
+            return user;
         }
 
-        [HttpPost]
-        public void Post([FromBody] User user)
-        {
-            try
-            {
+        //[HttpPost]
+        //public void Post([FromBody] User user)
+        //{
+        //    try
+        //    {
 
-                _userService.CreateUser(user);
-            }
-            catch (Exception ex)
-            {
+        //        _userService.CreateUser(user);
+        //    }
+        //    catch (Exception ex)
+        //    {
 
-            }
-        }
+        //    }
+        //}
        
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] User user)
         {
+            if (user == null || user.Id == 0)
+                throw new Exception("Invalid User");
+            _userService.UpdateUser(user);
         }
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public bool Delete(int id)
         {
+            if (id == 0)
+                throw new Exception("Invalid User Id");
+            return _userService.DeleteUser(id);
         }
     }
 }

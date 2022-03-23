@@ -62,9 +62,6 @@ namespace ToDo_List.Infrastructure.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.Property<string>("ZipCode")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -72,9 +69,41 @@ namespace ToDo_List.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.ToTable("Addresses");
+                });
 
-                    b.ToTable("Address");
+            modelBuilder.Entity("ToDo_List.Core.Entities.Organisation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Purpose")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Organizations");
                 });
 
             modelBuilder.Entity("ToDo_List.Core.Entities.User", b =>
@@ -91,25 +120,28 @@ namespace ToDo_List.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Gender")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("JobTitle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LoginID")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("MaritalStatus")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NationalIDNumber")
+                    b.Property<int?>("OrganisationId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
@@ -117,52 +149,18 @@ namespace ToDo_List.Infrastructure.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("Qualification")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("RowGuid")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("ToDo_List.Core.Entities.UserInfo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DisplayName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserInfos");
+                    b.HasIndex("OrganisationId");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("ToDo_List.Core.Entities.Work", b =>
@@ -193,6 +191,9 @@ namespace ToDo_List.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("OrganisationId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Priority")
                         .HasColumnType("int");
 
@@ -207,32 +208,42 @@ namespace ToDo_List.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("OrganisationId");
+
                     b.HasIndex("UserId");
 
                     b.ToTable("Works");
                 });
 
-            modelBuilder.Entity("ToDo_List.Core.Entities.Address", b =>
+            modelBuilder.Entity("ToDo_List.Core.Entities.User", b =>
                 {
-                    b.HasOne("ToDo_List.Core.Entities.User", null)
-                        .WithMany("Addresses")
-                        .HasForeignKey("UserId");
+                    b.HasOne("ToDo_List.Core.Entities.Organisation", null)
+                        .WithMany("Users")
+                        .HasForeignKey("OrganisationId");
                 });
 
             modelBuilder.Entity("ToDo_List.Core.Entities.Work", b =>
                 {
+                    b.HasOne("ToDo_List.Core.Entities.Organisation", "Organisation")
+                        .WithMany()
+                        .HasForeignKey("OrganisationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("ToDo_List.Core.Entities.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Organisation");
+
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("ToDo_List.Core.Entities.User", b =>
+            modelBuilder.Entity("ToDo_List.Core.Entities.Organisation", b =>
                 {
-                    b.Navigation("Addresses");
+                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

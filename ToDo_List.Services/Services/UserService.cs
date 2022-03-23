@@ -25,5 +25,47 @@ namespace ToDo_List.Services.Services
             return _contextService.CreateUser(user);
         }
 
+        public User UpdateUser(User user)
+        {
+            return _contextService.UpdateUser(user);
+        }
+
+        public bool DeleteUser(int id)
+        {
+            var user = _contextService.GetUserById(id);
+            if (user == null)
+                throw new Exception("User Not Found");
+            return _contextService.DeleteUser(user);
+        }
+
+        public User GetUserById(int id)
+        {
+            var user = _contextService.GetUserById(id);
+            return user;
+        }
+
+        public User GetUserByUserName(string userName)
+        {
+            var user = _contextService.GetUserByUserName(userName);
+            return user;
+        }
+
+        public User GetUserByName(string name)
+        {
+            var user = _contextService.GetUserByName(name);
+           return user;
+        }
+
+        public User GetUserByEmail(string email)
+        {
+            var user = _contextService.GetUserByEmail(email);
+            return user;
+        }
+
+        public User GetUserByPhone(string phone)
+        {
+            var user = _contextService.GetUserByPhone(phone);
+            return user;
+        }
     }
 }

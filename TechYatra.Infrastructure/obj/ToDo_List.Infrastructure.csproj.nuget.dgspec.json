@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\TY-TaskManagement\\TechYatra.Infrastructure\\ToDo_List.Infrastructure.csproj": {}
+    "C:\\Users\\applon\\OneDrive\\Desktop\\DummyProjects\\TY-TaskManagement\\TechYatra.Infrastructure\\ToDo_List.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\TY-TaskManagement\\Core\\ToDo_List.Core.csproj": {
+    "C:\\Users\\applon\\OneDrive\\Desktop\\DummyProjects\\TY-TaskManagement\\Core\\ToDo_List.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\TY-TaskManagement\\Core\\ToDo_List.Core.csproj",
+        "projectUniqueName": "C:\\Users\\applon\\OneDrive\\Desktop\\DummyProjects\\TY-TaskManagement\\Core\\ToDo_List.Core.csproj",
         "projectName": "ToDo_List.Core",
-        "projectPath": "C:\\Users\\Lenovo\\TY-TaskManagement\\Core\\ToDo_List.Core.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\TY-TaskManagement\\Core\\obj\\",
+        "projectPath": "C:\\Users\\applon\\OneDrive\\Desktop\\DummyProjects\\TY-TaskManagement\\Core\\ToDo_List.Core.csproj",
+        "packagesPath": "C:\\Users\\applon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\applon\\OneDrive\\Desktop\\DummyProjects\\TY-TaskManagement\\Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\applon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,17 +61,20 @@
         }
       }
     },
-    "C:\\Users\\Lenovo\\TY-TaskManagement\\TechYatra.Infrastructure\\ToDo_List.Infrastructure.csproj": {
+    "C:\\Users\\applon\\OneDrive\\Desktop\\DummyProjects\\TY-TaskManagement\\TechYatra.Infrastructure\\ToDo_List.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\TY-TaskManagement\\TechYatra.Infrastructure\\ToDo_List.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\applon\\OneDrive\\Desktop\\DummyProjects\\TY-TaskManagement\\TechYatra.Infrastructure\\ToDo_List.Infrastructure.csproj",
         "projectName": "ToDo_List.Infrastructure",
-        "projectPath": "C:\\Users\\Lenovo\\TY-TaskManagement\\TechYatra.Infrastructure\\ToDo_List.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\TY-TaskManagement\\TechYatra.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\applon\\OneDrive\\Desktop\\DummyProjects\\TY-TaskManagement\\TechYatra.Infrastructure\\ToDo_List.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\applon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\applon\\OneDrive\\Desktop\\DummyProjects\\TY-TaskManagement\\TechYatra.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\applon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,8 +88,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Lenovo\\TY-TaskManagement\\Core\\ToDo_List.Core.csproj": {
-                "projectPath": "C:\\Users\\Lenovo\\TY-TaskManagement\\Core\\ToDo_List.Core.csproj"
+              "C:\\Users\\applon\\OneDrive\\Desktop\\DummyProjects\\TY-TaskManagement\\Core\\ToDo_List.Core.csproj": {
+                "projectPath": "C:\\Users\\applon\\OneDrive\\Desktop\\DummyProjects\\TY-TaskManagement\\Core\\ToDo_List.Core.csproj"
               }
             }
           }

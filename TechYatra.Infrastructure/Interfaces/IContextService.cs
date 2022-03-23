@@ -19,5 +19,8 @@ namespace ToDo_List.Infrastructure.Interfaces
         List<Work> GetAllWorks();
         Work UpdateWork(Work work);
         bool DeleteWork(Work work);
+        User GetUserByEmail(string email);
+        User GetUserByPhone(string phone);
+        User GetUserByUserName(string userName);
     }
 }
