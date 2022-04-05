@@ -1802,7 +1802,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\applon\\.nuget\\packages\\": {}
+    "C:\\Users\\applon\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -1813,6 +1814,9 @@
       "packagesPath": "C:\\Users\\applon\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\applon\\OneDrive\\Desktop\\DummyProjects\\TY-TaskManagement\\ToDo_List.Services\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\applon\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -1858,7 +1862,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

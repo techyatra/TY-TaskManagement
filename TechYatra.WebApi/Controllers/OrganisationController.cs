@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TechYatra.WebApi.models;
+using ToDo_List.Core.Entities;
+using ToDo_List.Services.Interfaces;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,6 +11,11 @@ namespace TechYatra.WebApi.Controllers
     [ApiController]
     public class OrganisationController : ControllerBase
     {
+        private readonly IOrganisationService _service;
+        public OrganisationController(IOrganisationService service)
+        {
+            _service = service;
+        }
         // GET: api/<OrganisationController>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -22,11 +30,30 @@ namespace TechYatra.WebApi.Controllers
             return "value";
         }
 
+        [HttpGet("GetOrganisationsByUserId/{userId}")]
+        public List<OrganisationModel> GetOrganisationsByUserid(int userId)
+        {
+            var data =  _service.GetOrganisationsByUserId(userId);
+            var models = new List<OrganisationModel>();
+            data.ForEach(d =>
+            {
+                var model = new OrganisationModel();
+                model.OrganisationId = d.Id;
+                model.Name = d.Name;
+                model.Purpose = d.Purpose;
+                model.Description = d.Description;
+                model.CreatedAt = d.CreatedAt;
+                models.Add(model);
+            });
+            return models;
+        }
+
         // POST api/<OrganisationController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Organisation  obj)
         {
         }
+
 
         // PUT api/<OrganisationController>/5
         [HttpPut("{id}")]

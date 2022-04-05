@@ -75,7 +75,7 @@ namespace ToDo_List.Infrastructure.Services
 
         public User GetUserByPhone(string phone)
         {
-            var user = _context.Users.SingleOrDefault(u => u.Phone == phone);
+            var user = _context.Users.SingleOrDefault(u => u.Mobile == phone);
             return user;
         }
 
@@ -84,7 +84,20 @@ namespace ToDo_List.Infrastructure.Services
             var user = _context.Users.SingleOrDefault(u => u.Email == email);
             return user;
         }
-        
+
+        public List<Organisation> GetOrganisationsByUserId(int userId)
+        {
+            var user = GetUserById(userId);
+            if (user == null)
+                throw new Exception("user not found");
+            var userOrganisations = _context.UserOrganisations.Where(u => u.UserId == userId).ToList();
+            if (userOrganisations.Count() == 0)
+                throw new Exception("user has no organisations");
+            var organisationIds = userOrganisations.Select(s => s.OrganisationId).Distinct().ToList();
+            var organisations = _context.Organizations.Where(o => organisationIds.Contains(o.Id)).ToList();
+            return organisations;
+        }
+
         public Work CreateWork(Work work)
         {
             _context.Add(work);

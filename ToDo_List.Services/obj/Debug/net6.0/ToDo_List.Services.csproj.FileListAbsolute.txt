@@ -34,7 +34,6 @@ C:\Users\Lenovo\TY-TaskManagement\ToDo_List.Services\obj\Debug\net6.0\ToDo_List.
 C:\Users\Lenovo\TY-TaskManagement\ToDo_List.Services\obj\Debug\net6.0\ref\ToDo_List.Services.dll
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\bin\Debug\net6.0\ToDo_List.Services.deps.json
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\bin\Debug\net6.0\ToDo_List.Services.dll
-C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\bin\Debug\net6.0\ref\ToDo_List.Services.dll
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\bin\Debug\net6.0\ToDo_List.Services.pdb
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\bin\Debug\net6.0\ToDo_List.Core.dll
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\bin\Debug\net6.0\ToDo_List.Infrastructure.dll
@@ -49,3 +48,4 @@ C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Servi
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\obj\Debug\net6.0\ToDo_List.Services.dll
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\obj\Debug\net6.0\ref\ToDo_List.Services.dll
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\obj\Debug\net6.0\ToDo_List.Services.pdb
+C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\obj\Debug\net6.0\refint\ToDo_List.Services.dll

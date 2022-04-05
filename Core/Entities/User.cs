@@ -16,14 +16,12 @@ namespace ToDo_List.Core.Entities
         public string UserName { get; set; }
         public string Email { get; set; }
         public string Password  { get; set; }
-        public DateTime? BirthDate { get; set; }
-        public bool MaritalStatus { get; set; }
-        public Gender Gender { get; set; }
         [MaxLength(50)]
-        public string Phone { get; set; }
+        public string Mobile { get; set; }
         [NotMapped]
         public List<Address> Addresses { get; set; }
+
         [NotMapped]
-        public List<Organisation> Organisations { get; set; }
+        public List<UserOrganisation> UserOrganisations { get; set; }
     }
 }

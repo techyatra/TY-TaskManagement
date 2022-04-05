@@ -114,9 +114,6 @@ namespace ToDo_List.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime?>("BirthDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -124,30 +121,21 @@ namespace ToDo_List.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Gender")
-                        .HasColumnType("int");
-
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("MaritalStatus")
-                        .HasColumnType("bit");
+                    b.Property<string>("Mobile")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("OrganisationId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -158,9 +146,39 @@ namespace ToDo_List.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("ToDo_List.Core.Entities.UserOrganisation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("OrganisationId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
                     b.HasIndex("OrganisationId");
 
-                    b.ToTable("Users");
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserOrganisations");
                 });
 
             modelBuilder.Entity("ToDo_List.Core.Entities.Work", b =>
@@ -215,11 +233,23 @@ namespace ToDo_List.Infrastructure.Migrations
                     b.ToTable("Works");
                 });
 
-            modelBuilder.Entity("ToDo_List.Core.Entities.User", b =>
+            modelBuilder.Entity("ToDo_List.Core.Entities.UserOrganisation", b =>
                 {
-                    b.HasOne("ToDo_List.Core.Entities.Organisation", null)
-                        .WithMany("Users")
-                        .HasForeignKey("OrganisationId");
+                    b.HasOne("ToDo_List.Core.Entities.Organisation", "Organisations")
+                        .WithMany("OrganisationUsers")
+                        .HasForeignKey("OrganisationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ToDo_List.Core.Entities.User", "Users")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Organisations");
+
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("ToDo_List.Core.Entities.Work", b =>
@@ -243,7 +273,7 @@ namespace ToDo_List.Infrastructure.Migrations
 
             modelBuilder.Entity("ToDo_List.Core.Entities.Organisation", b =>
                 {
-                    b.Navigation("Users");
+                    b.Navigation("OrganisationUsers");
                 });
 #pragma warning restore 612, 618
         }

@@ -22,5 +22,6 @@ namespace ToDo_List.Infrastructure.Interfaces
         User GetUserByEmail(string email);
         User GetUserByPhone(string phone);
         User GetUserByUserName(string userName);
+        List<Organisation> GetOrganisationsByUserId(int userId);
     }
 }

@@ -67,5 +67,16 @@ namespace ToDo_List.Services.Services
             var user = _contextService.GetUserByPhone(phone);
             return user;
         }
+
+        public User FindUser(string userName)
+        {
+            var user = new User();
+            user = GetUserByUserName(userName);
+            if (user == null)
+                user = GetUserByEmail(userName);
+            if (user == null)
+                user = GetUserByPhone(userName);
+            return user;
+        }
     }
 }

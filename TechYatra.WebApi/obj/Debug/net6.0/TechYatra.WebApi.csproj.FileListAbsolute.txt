@@ -72,7 +72,6 @@ C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.WebAp
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.WebApi\bin\Debug\net6.0\TechYatra.WebApi.deps.json
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.WebApi\bin\Debug\net6.0\TechYatra.WebApi.runtimeconfig.json
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.WebApi\bin\Debug\net6.0\TechYatra.WebApi.dll
-C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.WebApi\bin\Debug\net6.0\ref\TechYatra.WebApi.dll
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.WebApi\bin\Debug\net6.0\TechYatra.WebApi.pdb
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.WebApi\bin\Debug\net6.0\Humanizer.dll
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
@@ -134,3 +133,4 @@ C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.WebAp
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.WebApi\obj\Debug\net6.0\ref\TechYatra.WebApi.dll
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.WebApi\obj\Debug\net6.0\TechYatra.WebApi.pdb
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.WebApi\obj\Debug\net6.0\TechYatra.WebApi.genruntimeconfig.cache
+C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.WebApi\obj\Debug\net6.0\refint\TechYatra.WebApi.dll

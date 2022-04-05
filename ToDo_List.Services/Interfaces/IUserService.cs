@@ -18,5 +18,6 @@ namespace ToDo_List.Services.Interfaces
         User GetUserByName(string userName);
         User GetUserByEmail(string email);
         User GetUserByPhone(string phone);
+        User FindUser(string userName);
     }
 }

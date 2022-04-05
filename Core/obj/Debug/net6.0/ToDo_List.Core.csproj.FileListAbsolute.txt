@@ -24,7 +24,6 @@ C:\Users\Lenovo\TY-TaskManagement\Core\obj\Debug\net6.0\ToDo_List.Core.pdb
 C:\Users\Lenovo\TY-TaskManagement\Core\obj\Debug\net6.0\ref\ToDo_List.Core.dll
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\bin\Debug\net6.0\ToDo_List.Core.deps.json
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\bin\Debug\net6.0\ToDo_List.Core.dll
-C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\bin\Debug\net6.0\ref\ToDo_List.Core.dll
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\bin\Debug\net6.0\ToDo_List.Core.pdb
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\obj\Debug\net6.0\ToDo_List.Core.csproj.AssemblyReference.cache
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\obj\Debug\net6.0\ToDo_List.Core.GeneratedMSBuildEditorConfig.editorconfig
@@ -34,3 +33,4 @@ C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\obj\Debug\
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\obj\Debug\net6.0\ToDo_List.Core.dll
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\obj\Debug\net6.0\ref\ToDo_List.Core.dll
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\obj\Debug\net6.0\ToDo_List.Core.pdb
+C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\obj\Debug\net6.0\refint\ToDo_List.Core.dll

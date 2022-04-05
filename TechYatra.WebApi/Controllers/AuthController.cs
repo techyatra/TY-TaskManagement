@@ -36,7 +36,7 @@ namespace ToDo_List.Api.Controllers
             var existingUserByEmail = _userService.GetUserByEmail(user.Email);
             if (existingUserByEmail != null)
                 throw new Exception("email already exists in the database");
-            var existingUserByPhone = _userService.GetUserByPhone(user.Phone);
+            var existingUserByPhone = _userService.GetUserByPhone(user.Mobile);
             if (existingUserByPhone != null)
                 throw new Exception("user already exists with phone number");
             _userService.CreateUser(user);

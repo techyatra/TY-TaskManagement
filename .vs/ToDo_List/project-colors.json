@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "dc8b666d-f1bc-4b4d-9b70-1c42758e8e4b": {
+      "ProjectGuid": "dc8b666d-f1bc-4b4d-9b70-1c42758e8e4b",
+      "DisplayName": "ToDo_List.Infrastructure",
+      "ColorIndex": 0
+    },
+    "ad789d97-e811-4ee6-a1ab-e30939432aa6": {
+      "ProjectGuid": "ad789d97-e811-4ee6-a1ab-e30939432aa6",
+      "DisplayName": "TechYatra.WebApi",
+      "ColorIndex": 1
+    },
+    "6b0b3b45-6412-4d6e-89bc-56cf203760a0": {
+      "ProjectGuid": "6b0b3b45-6412-4d6e-89bc-56cf203760a0",
+      "DisplayName": "ToDo_List.Services",
+      "ColorIndex": 2
+    },
+    "a0836959-47f8-4ea2-883b-c31ee952c14a": {
+      "ProjectGuid": "a0836959-47f8-4ea2-883b-c31ee952c14a",
+      "DisplayName": "ToDo_List.Core",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}

@@ -32,9 +32,17 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 builder.Services.AddTransient<IContextService, ContextService>();
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IWorkService, WorkService>();
+builder.Services.AddTransient<IOrganisationService, OrganisationService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy",
+        builder => builder.AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader());
+});
 builder.Services.AddSwaggerGen(c =>
 {
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -79,8 +87,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
+
+app.UseRouting();
+
+app.UseCors("CorsPolicy");
 app.UseAuthentication();
 app.UseAuthorization();
 
