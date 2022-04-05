@@ -85,6 +85,17 @@ namespace ToDo_List.Infrastructure.Services
             return user;
         }
 
+        public List<User> GetAllUsersByOrganisation(int id)
+        {
+            var organisation = _context.Organizations.SingleOrDefault(o => o.Id == id);
+            if (organisation == null)
+                throw new Exception("invalid organisation id");
+            var organisationUsers = _context.UserOrganisations.Where(o => o.OrganisationId == organisation.Id).ToList();
+            var userIds = organisationUsers.Select(u => u.UserId).ToList();
+            var users = _context.Users.Where(u => userIds.Contains(u.Id)).ToList();
+            return users;
+        }
+
         public List<Organisation> GetOrganisationsByUserId(int userId)
         {
             var user = GetUserById(userId);
@@ -109,6 +120,7 @@ namespace ToDo_List.Infrastructure.Services
             var Works = _context.Works.ToList();
             return Works;
         }
+        
 
 
         public Work UpdateWork(Work work)

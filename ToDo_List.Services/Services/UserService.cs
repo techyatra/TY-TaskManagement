@@ -78,5 +78,14 @@ namespace ToDo_List.Services.Services
                 user = GetUserByPhone(userName);
             return user;
         }
+        public User ResetPassword(string username, string password)
+        {
+            var user = GetUserByUserName(username);
+            if (user == null)
+                throw new Exception("invalid user");
+            user.Password = password;
+            var updatedUser = UpdateUser(user);
+            return updatedUser;
+        }
     }
 }

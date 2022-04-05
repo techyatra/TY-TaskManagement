@@ -10,5 +10,6 @@ namespace ToDo_List.Services.Interfaces
     public interface IOrganisationService
     {
         List<Organisation> GetOrganisationsByUserId(int userId);
+        List<User> GetAllUsersByOrganisationId(int id);
     }
 }

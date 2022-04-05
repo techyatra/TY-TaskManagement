@@ -16,10 +16,18 @@ namespace ToDo_List.Services.Services
         {
             _context = context;
         }
+
+        public List<User> GetAllUsersByOrganisationId(int id)
+        {
+            var data = _context.GetAllUsersByOrganisation(id);
+            return data;
+        }
+
         public List<Organisation> GetOrganisationsByUserId(int userId)
         {
             var organisations = _context.GetOrganisationsByUserId(userId);
             return organisations;
+
         }
     }
 }

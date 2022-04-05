@@ -47,6 +47,14 @@ namespace TechYatra.WebApi.Controllers
             });
             return models;
         }
+        [HttpGet("GetUsersByOraganisation/{organisationId}")]
+        public List<User> GetUsersByOrganisation(int oraganisationId)
+        {
+            var data = _service.GetAllUsersByOrganisationId(oraganisationId);
+            return data;
+
+
+        }
 
         // POST api/<OrganisationController>
         [HttpPost]

@@ -23,5 +23,6 @@ namespace ToDo_List.Infrastructure.Interfaces
         User GetUserByPhone(string phone);
         User GetUserByUserName(string userName);
         List<Organisation> GetOrganisationsByUserId(int userId);
+        List<User> GetAllUsersByOrganisation(int Id);
     }
 }
