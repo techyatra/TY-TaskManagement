@@ -39,6 +39,7 @@ namespace ToDo_List.Infrastructure.Services
             try
             {
                 _context.Remove(user);
+                _context.SaveChanges();
                 return true;
             }
             catch
@@ -121,7 +122,11 @@ namespace ToDo_List.Infrastructure.Services
             return Works;
         }
         
-
+        public List<Work> GetUserWorks(int userId)
+        {
+            var works = _context.Works.Where(w => w.UserId == userId && w.IsDeleted == false).ToList();
+            return works;
+        }
 
         public Work UpdateWork(Work work)
         {
@@ -136,6 +141,7 @@ namespace ToDo_List.Infrastructure.Services
             try
             {
                 _context.Remove(work);
+                _context.SaveChanges();
                 return true;
             }
             catch

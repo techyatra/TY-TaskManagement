@@ -13,6 +13,6 @@ namespace ToDo_List.Services.Interfaces
         Work CreateWork(Work work);
         Work UpdateWork(Work work);
         bool DeleteWork(Work work);
-        
+        List<Work> GetUserWorks(int userId);
     }
 }

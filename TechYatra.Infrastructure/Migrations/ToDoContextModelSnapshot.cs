@@ -114,6 +114,10 @@ namespace ToDo_List.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -174,10 +178,6 @@ namespace ToDo_List.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OrganisationId");
-
-                    b.HasIndex("UserId");
-
                     b.ToTable("UserOrganisations");
                 });
 
@@ -209,9 +209,6 @@ namespace ToDo_List.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("OrganisationId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Priority")
                         .HasColumnType("int");
 
@@ -226,54 +223,7 @@ namespace ToDo_List.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OrganisationId");
-
-                    b.HasIndex("UserId");
-
                     b.ToTable("Works");
-                });
-
-            modelBuilder.Entity("ToDo_List.Core.Entities.UserOrganisation", b =>
-                {
-                    b.HasOne("ToDo_List.Core.Entities.Organisation", "Organisations")
-                        .WithMany("OrganisationUsers")
-                        .HasForeignKey("OrganisationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ToDo_List.Core.Entities.User", "Users")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Organisations");
-
-                    b.Navigation("Users");
-                });
-
-            modelBuilder.Entity("ToDo_List.Core.Entities.Work", b =>
-                {
-                    b.HasOne("ToDo_List.Core.Entities.Organisation", "Organisation")
-                        .WithMany()
-                        .HasForeignKey("OrganisationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ToDo_List.Core.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Organisation");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("ToDo_List.Core.Entities.Organisation", b =>
-                {
-                    b.Navigation("OrganisationUsers");
                 });
 #pragma warning restore 612, 618
         }

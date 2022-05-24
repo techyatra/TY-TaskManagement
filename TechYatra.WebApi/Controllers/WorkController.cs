@@ -23,7 +23,13 @@ namespace TechYatra.WebApi.Controllers
         {
             return _workService.GetAllWorks();
         }
-     
+
+        [HttpGet("{userId}")]
+        public List<Work> Get(int userId)
+        {
+            return _workService.GetUserWorks(userId);
+        }
+
 
         // POST api/<WorkController>
         [HttpPost]
@@ -40,12 +46,15 @@ namespace TechYatra.WebApi.Controllers
         }
 
         // DELETE api/<WorkController>/5
-        [HttpDelete("{id}")]
-        public bool Delete(int id)
+        [HttpDelete("{userId}/{id}")]
+        public List<Work> Delete(int userId,int id)
         {
             var works = _workService.GetAllWorks();
             var work = works.SingleOrDefault(s => s.Id == id);
-            return _workService.DeleteWork(work);
+             _workService.DeleteWork(work);
+            var userWorks = _workService.GetUserWorks(userId);
+            userWorks = userWorks.Where(w => w.IsDeleted == false).ToList();
+            return userWorks;
         }
     }
 }

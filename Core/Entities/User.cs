@@ -18,10 +18,9 @@ namespace ToDo_List.Core.Entities
         public string Password  { get; set; }
         [MaxLength(50)]
         public string Mobile { get; set; }
-        [NotMapped]
-        public List<Address> Addresses { get; set; }
+        public string Address { get; set; }
 
-        [NotMapped]
-        public List<UserOrganisation> UserOrganisations { get; set; }
+        //[NotMapped]
+        //public List<UserOrganisation> UserOrganisations { get; set; }
     }
 }

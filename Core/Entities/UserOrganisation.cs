@@ -10,9 +10,9 @@ namespace ToDo_List.Core.Entities
     public class UserOrganisation: BaseEntity
     {
         public int UserId { get; set; }
-        public User Users { get; set; }
+        //public User Users { get; set; }
 
         public int OrganisationId { get; set; }
-        public Organisation Organisations { get; set; }
+        //public Organisation Organisations { get; set; }
     }
 }

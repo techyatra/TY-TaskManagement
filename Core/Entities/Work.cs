@@ -9,7 +9,7 @@ using ToDo_List.Core.Enums;
 
 namespace ToDo_List.Core.Entities
 {
-    public class Work: BaseEntity
+    public class Work : BaseEntity
     {
         public string Name { get; set; }
         public string Description { get; set; }
@@ -17,10 +17,9 @@ namespace ToDo_List.Core.Entities
         public WorkPriority Priority { get; set; }
         public WorkStatus Status { get; set; }
         public DateTime? AssignedAt { get; set; }
-        [ForeignKey("UserId")]
-        public User User { get; set; }
-        public Organisation Organisation { get; set; }
-
-
+        //[ForeignKey("UserId")]
+        //public User User { get; set; }
+        public int UserId { get; set; }
+        //public Organisation Organisation { get; set; }
     }
 }

@@ -32,6 +32,11 @@ namespace ToDo_List.Services.Services
             return _contextService.GetAllWorks();
         }
 
+        public List<Work> GetUserWorks(int userId)
+        {
+            return _contextService.GetUserWorks(userId);
+        }
+
         public bool DeleteWork(Work work)
         {
             return _contextService.DeleteWork(work);

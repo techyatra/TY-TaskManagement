@@ -13,6 +13,6 @@ namespace ToDo_List.Core.Entities
         public string Name { get; set; }
         public string Description { get; set; }
         public string Purpose { get; set; }
-        public List<UserOrganisation> OrganisationUsers { get; set; }
+       // public List<UserOrganisation> OrganisationUsers { get; set; }
     }
 }

@@ -40,6 +40,6 @@ C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.Infra
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.Infrastructure\obj\Debug\net6.0\ToDo_List.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.Infrastructure\obj\Debug\net6.0\ToDo_List.Infrastructure.csproj.CopyComplete
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.Infrastructure\obj\Debug\net6.0\ToDo_List.Infrastructure.dll
-C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.Infrastructure\obj\Debug\net6.0\ref\ToDo_List.Infrastructure.dll
-C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.Infrastructure\obj\Debug\net6.0\ToDo_List.Infrastructure.pdb
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.Infrastructure\obj\Debug\net6.0\refint\ToDo_List.Infrastructure.dll
+C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.Infrastructure\obj\Debug\net6.0\ToDo_List.Infrastructure.pdb
+C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\TechYatra.Infrastructure\obj\Debug\net6.0\ref\ToDo_List.Infrastructure.dll

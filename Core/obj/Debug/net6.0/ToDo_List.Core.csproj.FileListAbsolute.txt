@@ -31,6 +31,6 @@ C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\obj\Debug\
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\obj\Debug\net6.0\ToDo_List.Core.AssemblyInfo.cs
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\obj\Debug\net6.0\ToDo_List.Core.csproj.CoreCompileInputs.cache
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\obj\Debug\net6.0\ToDo_List.Core.dll
-C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\obj\Debug\net6.0\ref\ToDo_List.Core.dll
-C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\obj\Debug\net6.0\ToDo_List.Core.pdb
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\obj\Debug\net6.0\refint\ToDo_List.Core.dll
+C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\obj\Debug\net6.0\ToDo_List.Core.pdb
+C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\Core\obj\Debug\net6.0\ref\ToDo_List.Core.dll

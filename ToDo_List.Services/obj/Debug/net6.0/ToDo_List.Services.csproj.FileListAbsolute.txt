@@ -46,6 +46,6 @@ C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Servi
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\obj\Debug\net6.0\ToDo_List.Services.csproj.CoreCompileInputs.cache
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\obj\Debug\net6.0\ToDo_List.Services.csproj.CopyComplete
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\obj\Debug\net6.0\ToDo_List.Services.dll
-C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\obj\Debug\net6.0\ref\ToDo_List.Services.dll
-C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\obj\Debug\net6.0\ToDo_List.Services.pdb
 C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\obj\Debug\net6.0\refint\ToDo_List.Services.dll
+C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\obj\Debug\net6.0\ToDo_List.Services.pdb
+C:\Users\applon\OneDrive\Desktop\DummyProjects\TY-TaskManagement\ToDo_List.Services\obj\Debug\net6.0\ref\ToDo_List.Services.dll
